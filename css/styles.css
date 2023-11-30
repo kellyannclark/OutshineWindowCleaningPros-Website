@@ -1,0 +1,366 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Noto+Sans+Glagolitic&family=Old+Standard+TT:wght@700&family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;700&family=Noto+Sans+Glagolitic&family=Old+Standard+TT:wght@700&family=Poppins:wght@300;400&display=swap');
+
+.header {
+    background-color: #217dbb;
+    margin: 0; /* Remove default margin */
+    width: 100%; /* Make the header take the full width of the screen */
+    display: flex;
+    justify-content: space-between; /* Distribute items to the ends of the flex container */
+    align-items: center;
+    height: 60px; /* Center items vertically */
+}
+
+.logo img {
+    max-width: 100px; /* Adjust the max-width as needed */
+    height: 50px;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 3px;
+    border-radius: 0px 20px 0px 20px ;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 20px; /* Adjust the margin as needed */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+nav {
+    max-width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    font-family: "Poppins";
+}
+
+nav ul li a:hover {
+    color: #12229d; /* Change the color on hover */
+}
+
+.additional-text {
+    color: white;
+    font-family: "Noto Sans Glagolitic";
+    font-size: 18px;
+    white-space: nowrap;
+    padding-right: 30px;
+}
+
+#hero-video {
+    max-width: 100%; /* Make the video responsive */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove extra space below the video */
+    margin: 0 auto; /* Center the video */
+}
+
+
+
+/******************************
+****  Video Overlay  **********
+******************************/
+
+
+.video-overlay {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 70%; /* Adjust the width of the overlay as needed */
+    
+}
+
+.main-title {
+    font-size: 2.8em; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Adjust margin as needed */
+    white-space: nowrap;
+    font-family: "Noto Sans Glagolitic";
+}
+
+.sub-title {
+    font-size: .9em; /* Adjust font size as needed */
+    margin-bottom: 70px; /* Adjust margin as needed */
+    text-decoration: none; 
+    font-family: "Poppins";
+}
+
+.link-form {
+    color: white;
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color:white;
+    color: #217dbb;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: "Poppins";
+}
+
+.button:hover {
+    background-color: #217dbb;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+/******************************
+****  Nav Hamburger **********
+******************************/
+
+.menu-toggle {
+    display: none; /* Hide the menu toggle by default */
+    cursor: pointer;
+}
+
+/******************************
+****  Feature Section  **********
+******************************/
+
+
+.feature-section {
+    background-color: #217dbb; /* Background color for the section */
+    padding: 50px 0; 
+    position: relative;
+}
+
+.feature-section::before {
+    content: "";
+    position: absolute;
+    top: 5%; 
+    left: 5%; 
+    width: 90%; 
+    height: 90%;
+    background-color: white;
+    opacity: 0.9; 
+    z-index: 1; 
+}
+
+.feature-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.feature-text,
+.feature-image {
+    width: 90%; /* Full width by default */
+    box-sizing: border-box; /* Include padding in width calculation */
+    text-align: left; /* Center text within the container */
+}
+
+.feature-text {
+    padding:  25px; 
+    margin-left: 30px;
+    margin-right: 30px;
+    color: #217dbb;
+    font-family: "Noto Sans Glagolitic";
+}
+
+.feature-image {
+    padding: 0 20px 30px; /* Adjust padding as needed */
+}
+
+.feature-image img {
+    max-width: 80%;
+    height: auto;
+    margin-right: 40px;
+}
+
+/******************************
+****  Icon Section  **********
+******************************/
+
+
+.custom-section {
+    background-color: white;
+    padding: 50px 0; 
+    margin: 10px;
+}
+
+
+.custom-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.custom-item {
+    display: flex;
+    align-items: center; 
+}
+
+
+.custom-item img {
+    max-width: 40%;
+    height: 30%;
+    margin-left: 40px;
+}
+
+.text-content {
+    margin-left: 80px; /* Adjust the margin between image and text */
+    margin-bottom: 50px;
+}
+
+
+
+.text-content h2 {
+    font-size: 24px; /* Set your desired font size */
+    color: #217dbb;/* Set your desired text color */
+    margin-bottom: 10px; /* Adjust margin as needed */
+    font-family: "Noto Sans Glagolitic";
+}
+
+
+.text-content p {
+    font-size: 16px; /* Set your desired font size */
+    color: #217dbb; /* Set your desired text color */
+    font-family: "Noto Sans Glagolitic";
+    margin-right: 40px;
+}
+
+
+
+
+
+
+
+
+
+/******************************
+****  Media Query for Screens Smaller Than 740px
+******************************/
+
+
+@media only screen and (max-width: 740px) {
+    .header {
+        display: flex;
+        justify-content: space-between; /* Distribute items to the ends of the flex container */
+        align-items: center; /* Center items vertically */
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .logo {
+        order: -1; /* Move the logo to the left */
+
+    }
+
+    .logo img {
+        max-width: 50px; /* Adjust the default max-width as needed */
+        height: auto;
+    
+    }
+    
+    nav {
+        display: none; /* Hide the navigation links by default for small screens */
+    }
+
+    /* Style to make the bars look like a hamburger icon */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+
+    .menu-toggle.active + nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: #5cb6f9; /* Adjust background color as needed */
+    }
+    .video-overlay {
+        width: 90%; /* Adjust the width for smaller screens */
+        top: 5; /* Move the overlay higher on smaller screens */
+        font-size: 60%; 
+       
+    }
+    .button {
+        font-size: 80%; /* Adjust the percentage as needed for smaller screens */
+    }
+
+    .additional-text {
+        display: none;
+    }
+
+    .feature-container {
+        flex-direction: column; /* Stack items in a column */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .feature-text,
+    .feature-image {
+        width: 70%; /* Full width for smaller screens */
+        padding: 0; /* Remove padding for smaller screens */
+        text-align: center; /* Center text within the container */
+    }
+
+    .feature-image {
+        margin-bottom: 20px; 
+       
+    }
+    .custom-item {
+        flex-direction: column; /* Stack items in a column */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .custom-item img {
+        max-width: 80%; /* Adjust the max-width as needed for smaller screens */
+        height: auto;
+        margin-bottom: 20px; /* Add margin between the image and text */
+    }
+
+    .text-content {
+        margin-left: 0; /* Reset margin for smaller screens */
+        text-align: center; /* Center text within the container */
+        margin-bottom: 20px; /* Add margin between the text and the next element */
+    }
+
+
+}
+
+
