@@ -11,7 +11,6 @@
 <body>
     <div class="main" id="main-header">
     </div>
-
     <main>
          <video autoplay muted loop poster="images/weston-poster-image.png" id="hero-video">
             <source src="images/westonsvideo.mp4" type="video/mp4">
@@ -29,7 +28,7 @@
                     </strong>
                 </a>
             </p>
-            <a href="views/quoteForm.html" class="button" data-id="myLink" target="_blank">Get a Quote</a>
+            <a href="views/quoteForm.html" id="submitBtn" class="button slide-in" data-id="myLink" target="_blank">Get a Quote</a>
         </div>
         <section class="feature-section">
             <div class="feature-container">
@@ -68,18 +67,9 @@
         </section>
 
         <div id="reviews-container"></div>
-
-
-
     </main>
     <footer id="main-footer"></footer>
-
-    <script src="js/main.js" type="module"></script>
-    <script src="js/googleApi.js"></script>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpuXTCJaRgg1VV11YbJKoWAANQNZv8adQ&callback=console.debug&libraries=maps,marker&v=beta">
-    </script>
-  
-
+    <script src="./js/freeEstimateAnimation.mjs" type="module"></script>
+    <script src="./js/main.js" type="module"></script>
 </body>
-
 </html>

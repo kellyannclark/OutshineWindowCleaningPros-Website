@@ -52,13 +52,7 @@ nav ul li a:hover {
     color: #12229d; /* Change the color on hover */
 }
 
-.additional-text {
-    color: white;
-    font-family: "Noto Sans Glagolitic";
-    font-size: 18px;
-    white-space: nowrap;
-    padding-right: 30px;
-}
+
 
 #hero-video {
     max-width: 100%; /* Make the video responsive */
@@ -67,6 +61,25 @@ nav ul li a:hover {
     margin: 0 auto; /* Center the video */
 }
 
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .pulse {
+    animation: pulse 1s infinite; 
+    color: white;
+    font-family: "Noto Sans Glagolitic";
+    font-size: 18px;
+    white-space: nowrap;
+    padding-right: 30px;
+    }
 
 
 /******************************
@@ -114,7 +127,18 @@ nav ul li a:hover {
     transition: background-color 0.3s ease;
     font-family: "Poppins";
 }
-
+/* Define the slide-in animation */
+.button.slide-in {
+    transform: translateX(-100%); /* Initial position for the slide-in animation */
+    animation: slideIn 1s forwards; /* Animation duration: 1 second */
+  }
+  
+  @keyframes slideIn {
+    to {
+      transform: translateX(0); /* Move the button to its original position */
+    }
+  }
+  
 .button:hover {
     background-color: #217dbb;
 }
