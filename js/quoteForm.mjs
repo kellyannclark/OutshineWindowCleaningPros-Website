@@ -17,7 +17,7 @@ function submitForm(ev) {
         return;
     }
 
-    fd.append('api-key', 'myApiKey'); 
+    fd.append('api-key', 'myApiKey');
 
     for (let key of fd.keys()) {
         console.log(key, fd.get(key));
@@ -30,26 +30,29 @@ function submitForm(ev) {
     });
 
     fetch(req)
-    .then((res) => {
-        if (!res.ok) {
-            throw new Error(`HTTP error! Status: ${res.status}`);
-        }
-        return res.json();
-    })
-    .then((data) => {
-        console.log('Response from server');
-        console.log(data);
-    })
-    .catch((error) => {
-        console.error('Error fetching data:', error);
-    });
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`HTTP error! Status: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then((data) => {
+            console.log('Response from server');
+            console.log(data);
 
+            // Clear form fields
+            quoteForm.reset();
+
+            // Display success message (adjust as needed)
+            alert('Form submitted successfully!');
+
+            // Redirect to the home page
+            window.location.href = '/'; // Adjust the URL as needed
+        })
+        .catch((error) => {
+            console.error('Error fetching data:', error);
+        });
 }
 
 export { submitForm };
-
-
-
-
-
 
